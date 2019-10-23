@@ -180,6 +180,7 @@
             this.checkBox_full.TabIndex = 12;
             this.checkBox_full.Text = "42 km Полный марафон ($145)";
             this.checkBox_full.UseVisualStyleBackColor = true;
+            this.checkBox_full.CheckedChanged += new System.EventHandler(this.checkBox_full_EnabledChanged);
             // 
             // checkBox_half
             // 
@@ -191,6 +192,7 @@
             this.checkBox_half.TabIndex = 13;
             this.checkBox_half.Text = "21 km Полумарафон ($75)";
             this.checkBox_half.UseVisualStyleBackColor = true;
+            this.checkBox_half.CheckedChanged += new System.EventHandler(this.checkBox_full_EnabledChanged);
             // 
             // checkBox_min
             // 
@@ -202,6 +204,7 @@
             this.checkBox_min.TabIndex = 14;
             this.checkBox_min.Text = "5 km Малая дистанция ($20)";
             this.checkBox_min.UseVisualStyleBackColor = true;
+            this.checkBox_min.CheckedChanged += new System.EventHandler(this.checkBox_full_EnabledChanged);
             // 
             // rb_a
             // 
@@ -214,6 +217,7 @@
             this.rb_a.TabStop = true;
             this.rb_a.Text = "Вариант А ($0):";
             this.rb_a.UseVisualStyleBackColor = true;
+            this.rb_a.CheckedChanged += new System.EventHandler(this.checkBox_full_EnabledChanged);
             // 
             // rb_b
             // 
@@ -226,6 +230,7 @@
             this.rb_b.TabStop = true;
             this.rb_b.Text = "Вариант В ($20):";
             this.rb_b.UseVisualStyleBackColor = true;
+            this.rb_b.CheckedChanged += new System.EventHandler(this.checkBox_full_EnabledChanged);
             // 
             // rb_c
             // 
@@ -238,6 +243,7 @@
             this.rb_c.TabStop = true;
             this.rb_c.Text = "Вариант С ($45):";
             this.rb_c.UseVisualStyleBackColor = true;
+            this.rb_c.CheckedChanged += new System.EventHandler(this.checkBox_full_EnabledChanged);
             // 
             // label8
             // 
@@ -388,9 +394,9 @@
             this.lab_sum_contribution.ForeColor = System.Drawing.Color.Gray;
             this.lab_sum_contribution.Location = new System.Drawing.Point(582, 571);
             this.lab_sum_contribution.Name = "lab_sum_contribution";
-            this.lab_sum_contribution.Size = new System.Drawing.Size(215, 91);
+            this.lab_sum_contribution.Size = new System.Drawing.Size(127, 91);
             this.lab_sum_contribution.TabIndex = 36;
-            this.lab_sum_contribution.Text = "$185";
+            this.lab_sum_contribution.Text = "$0";
             this.lab_sum_contribution.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2

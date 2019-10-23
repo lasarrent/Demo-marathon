@@ -17,6 +17,17 @@ namespace demo_maraphon
         }
         int sum = 0;
 
+        private void summerise() {
+            sum = 0;
+            if (checkBox_full.Checked) sum += 145;
+            if (checkBox_half.Checked) sum += 75;
+            if (checkBox_min.Checked) sum += 20;
+            if (rb_b.Checked) sum += 20;
+            if (rb_c.Checked) sum += 45;
+
+            lab_sum_contribution.Text = '$' + sum.ToString();
+        }
+
         private void Registr_for_an_event_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "g463_zhmurov_demoDataSet.Charity". При необходимости она может быть перемещена или удалена.
@@ -43,11 +54,7 @@ namespace demo_maraphon
         {
             if (checkBox_min.Checked || checkBox_half.Checked || checkBox_full.Checked)
             {
-                if (checkBox_full.Checked) sum += 145;
-                if (checkBox_half.Checked) sum += 75;
-                if (checkBox_min.Checked) sum += 20;
-                if (rb_b.Checked) sum += 20;
-                if (rb_c.Checked) sum += 45;
+                
                 if (int.Parse(tb_sum.Text) < 0)
                 {
                     MessageBox.Show("Сумма взноса не может быть отрицательной!", "Отрицательная сумма взноса!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -55,6 +62,7 @@ namespace demo_maraphon
                 else {
                    int sum_of_contribution = int.Parse(tb_sum.Text);
                 }
+                lab_sum_contribution.Text = sum.ToString();
             }
             else {
                 MessageBox.Show("Вы не выбрали марафон!", "Вы не выбрали марафон!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -82,6 +90,11 @@ namespace demo_maraphon
             TextBox t = (TextBox)sender;
             if (t.Text == "") t.Text = (string)t.Tag;
             t.ForeColor = Color.Gray;
+        }
+
+        private void checkBox_full_EnabledChanged(object sender, EventArgs e)
+        {
+            summerise();
         }
     }
 }
