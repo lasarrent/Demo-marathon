@@ -114,6 +114,18 @@
     <Compile Include="Registration as a runner.Designer.cs">
       <DependentUpon>Registration as a runner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration confirmation.Designer.cs">
+      <DependentUpon>Registration confirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registration for event info charity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registration for event info charity.Designer.cs">
+      <DependentUpon>registration for event info charity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Runner menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +188,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration as a runner.resx">
       <DependentUpon>Registration as a runner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration confirmation.resx">
+      <DependentUpon>Registration confirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registration for event info charity.resx">
+      <DependentUpon>registration for event info charity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Runner menu.resx">
       <DependentUpon>Runner menu.cs</DependentUpon>

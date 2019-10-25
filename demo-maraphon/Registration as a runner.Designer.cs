@@ -65,7 +65,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.genderTableAdapter = new demo_maraphon.g463_zhmurov_demoDataSetTableAdapters.GenderTableAdapter();
             this.countryTableAdapter = new demo_maraphon.g463_zhmurov_demoDataSetTableAdapters.CountryTableAdapter();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_photo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
@@ -435,19 +434,11 @@
             // 
             this.countryTableAdapter.ClearBeforeFill = true;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(519, 295);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 38;
-            // 
             // Registration_as_a_runner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 700);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cb_country);
@@ -533,6 +524,5 @@
         private g463_zhmurov_demoDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private System.Windows.Forms.BindingSource countryBindingSource;
         private g463_zhmurov_demoDataSetTableAdapters.CountryTableAdapter countryTableAdapter;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

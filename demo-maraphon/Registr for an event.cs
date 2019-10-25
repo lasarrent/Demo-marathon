@@ -61,8 +61,11 @@ namespace demo_maraphon
                 }
                 else {
                    int sum_of_contribution = int.Parse(tb_sum.Text);
+                    Registration_confirmation f_reg_conf = new Registration_confirmation();
+                    f_reg_conf.Show();
+                    this.Close();
                 }
-                lab_sum_contribution.Text = sum.ToString();
+
             }
             else {
                 MessageBox.Show("Вы не выбрали марафон!", "Вы не выбрали марафон!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -95,6 +98,12 @@ namespace demo_maraphon
         private void checkBox_full_EnabledChanged(object sender, EventArgs e)
         {
             summerise();
+        }
+
+        private void but_info_Click(object sender, EventArgs e)
+        {
+            registration_for_event_info_charity f_charity_info = new registration_for_event_info_charity();
+            f_charity_info.Show();
         }
     }
 }

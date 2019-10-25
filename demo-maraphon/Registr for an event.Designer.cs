@@ -209,6 +209,7 @@
             // rb_a
             // 
             this.rb_a.AutoSize = true;
+            this.rb_a.Checked = true;
             this.rb_a.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rb_a.Location = new System.Drawing.Point(535, 317);
             this.rb_a.Name = "rb_a";
@@ -326,7 +327,7 @@
             this.cb_contribution.Name = "cb_contribution";
             this.cb_contribution.Size = new System.Drawing.Size(237, 33);
             this.cb_contribution.TabIndex = 30;
-            this.cb_contribution.ValueMember = "CharityName";
+            this.cb_contribution.ValueMember = "CharityId";
             // 
             // charityBindingSource
             // 
@@ -357,7 +358,7 @@
             this.tb_sum.Name = "tb_sum";
             this.tb_sum.Size = new System.Drawing.Size(237, 31);
             this.tb_sum.TabIndex = 32;
-            this.tb_sum.Text = "$500";
+            this.tb_sum.Text = "500";
             this.tb_sum.Enter += new System.EventHandler(this.tb_name_Enter);
             this.tb_sum.Leave += new System.EventHandler(this.tb_name_Leave);
             // 
@@ -434,6 +435,7 @@
             this.but_info.TabIndex = 39;
             this.but_info.Text = "i";
             this.but_info.UseVisualStyleBackColor = false;
+            this.but_info.Click += new System.EventHandler(this.but_info_Click);
             // 
             // Registr_for_an_event
             // 
