@@ -496,7 +496,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tb_pass;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_repass;
         private System.Windows.Forms.Label label6;
@@ -524,5 +523,6 @@
         private g463_zhmurov_demoDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
         private System.Windows.Forms.BindingSource countryBindingSource;
         private g463_zhmurov_demoDataSetTableAdapters.CountryTableAdapter countryTableAdapter;
+        public System.Windows.Forms.TextBox tb_email;
     }
 }
