@@ -37,9 +37,9 @@
             this.but_result = new System.Windows.Forms.Button();
             this.but_registration = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.but_logout = new System.Windows.Forms.Button();
             this.but_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.but_logout = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,7 @@
             this.but_edit.TabIndex = 35;
             this.but_edit.Text = "Редактирование профиля";
             this.but_edit.UseVisualStyleBackColor = false;
+            this.but_edit.Click += new System.EventHandler(this.but_edit_Click);
             // 
             // but_result
             // 
@@ -147,6 +148,17 @@
             this.panel1.Size = new System.Drawing.Size(906, 66);
             this.panel1.TabIndex = 32;
             // 
+            // but_logout
+            // 
+            this.but_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.but_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_logout.Location = new System.Drawing.Point(767, 12);
+            this.but_logout.Name = "but_logout";
+            this.but_logout.Size = new System.Drawing.Size(92, 31);
+            this.but_logout.TabIndex = 40;
+            this.but_logout.Text = "logout";
+            this.but_logout.UseVisualStyleBackColor = false;
+            // 
             // but_back
             // 
             this.but_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -169,17 +181,6 @@
             this.label1.Size = new System.Drawing.Size(375, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "MARATHON SKILLS 2017";
-            // 
-            // but_logout
-            // 
-            this.but_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.but_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_logout.Location = new System.Drawing.Point(767, 12);
-            this.but_logout.Name = "but_logout";
-            this.but_logout.Size = new System.Drawing.Size(92, 31);
-            this.but_logout.TabIndex = 40;
-            this.but_logout.Text = "logout";
-            this.but_logout.UseVisualStyleBackColor = false;
             // 
             // Runner_menu
             // 

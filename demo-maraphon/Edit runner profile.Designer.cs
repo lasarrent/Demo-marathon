@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.but_logout = new System.Windows.Forms.Button();
             this.but_back = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.but_logout = new System.Windows.Forms.Button();
             this.pic_photo = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lab_email = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cb_gender = new System.Windows.Forms.ComboBox();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.g463_zhmurov_demoDataSet = new demo_maraphon.g463_zhmurov_demoDataSet();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_firstName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cb_country = new System.Windows.Forms.ComboBox();
+            this.countryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.dtp_yearBorn = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,11 +60,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tb_pass = new System.Windows.Forms.TextBox();
             this.but_cancel = new System.Windows.Forms.Button();
-            this.but_registration = new System.Windows.Forms.Button();
+            this.but_save = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label_date = new System.Windows.Forms.Label();
+            this.genderTableAdapter = new demo_maraphon.g463_zhmurov_demoDataSetTableAdapters.GenderTableAdapter();
+            this.countryTableAdapter = new demo_maraphon.g463_zhmurov_demoDataSetTableAdapters.CountryTableAdapter();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_photo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zhmurov_demoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +96,17 @@
             this.panel1.Size = new System.Drawing.Size(956, 66);
             this.panel1.TabIndex = 5;
             // 
+            // but_logout
+            // 
+            this.but_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.but_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_logout.Location = new System.Drawing.Point(831, 12);
+            this.but_logout.Name = "but_logout";
+            this.but_logout.Size = new System.Drawing.Size(92, 31);
+            this.but_logout.TabIndex = 3;
+            this.but_logout.Text = "logout";
+            this.but_logout.UseVisualStyleBackColor = false;
+            // 
             // but_back
             // 
             this.but_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -108,17 +129,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "MARATHON SKILLS 2017";
             // 
-            // but_logout
-            // 
-            this.but_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.but_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_logout.Location = new System.Drawing.Point(831, 12);
-            this.but_logout.Name = "but_logout";
-            this.but_logout.Size = new System.Drawing.Size(92, 31);
-            this.but_logout.TabIndex = 3;
-            this.but_logout.Text = "logout";
-            this.but_logout.UseVisualStyleBackColor = false;
-            // 
             // pic_photo
             // 
             this.pic_photo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -140,17 +150,17 @@
             this.label5.Text = "Email:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label3
+            // lab_email
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(219, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 25);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "the.email@address.com";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lab_email.AutoSize = true;
+            this.lab_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lab_email.ForeColor = System.Drawing.Color.Gray;
+            this.lab_email.Location = new System.Drawing.Point(219, 161);
+            this.lab_email.Name = "lab_email";
+            this.lab_email.Size = new System.Drawing.Size(243, 25);
+            this.lab_email.TabIndex = 30;
+            this.lab_email.Text = "the.email@address.com";
+            this.lab_email.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label10
             // 
@@ -165,6 +175,7 @@
             // 
             // cb_gender
             // 
+            this.cb_gender.DataSource = this.genderBindingSource;
             this.cb_gender.DisplayMember = "Gender";
             this.cb_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_gender.ForeColor = System.Drawing.Color.Gray;
@@ -174,6 +185,16 @@
             this.cb_gender.Size = new System.Drawing.Size(143, 33);
             this.cb_gender.TabIndex = 35;
             this.cb_gender.ValueMember = "Gender";
+            // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.g463_zhmurov_demoDataSet;
+            // 
+            // g463_zhmurov_demoDataSet
+            // 
+            this.g463_zhmurov_demoDataSet.DataSetName = "g463_zhmurov_demoDataSet";
+            this.g463_zhmurov_demoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label8
             // 
@@ -230,6 +251,7 @@
             // 
             // cb_country
             // 
+            this.cb_country.DataSource = this.countryBindingSource;
             this.cb_country.DisplayMember = "CountryName";
             this.cb_country.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_country.ForeColor = System.Drawing.Color.Gray;
@@ -238,7 +260,12 @@
             this.cb_country.Name = "cb_country";
             this.cb_country.Size = new System.Drawing.Size(191, 33);
             this.cb_country.TabIndex = 39;
-            this.cb_country.ValueMember = "CountryName";
+            this.cb_country.ValueMember = "CountryCode";
+            // 
+            // countryBindingSource
+            // 
+            this.countryBindingSource.DataMember = "Country";
+            this.countryBindingSource.DataSource = this.g463_zhmurov_demoDataSet;
             // 
             // label11
             // 
@@ -291,6 +318,7 @@
             this.but_view.TabIndex = 43;
             this.but_view.Text = "Просмотр...";
             this.but_view.UseVisualStyleBackColor = false;
+            this.but_view.Click += new System.EventHandler(this.but_view_Click);
             // 
             // label4
             // 
@@ -367,17 +395,18 @@
             this.but_cancel.Text = "Отмена";
             this.but_cancel.UseVisualStyleBackColor = false;
             // 
-            // but_registration
+            // but_save
             // 
-            this.but_registration.BackColor = System.Drawing.Color.White;
-            this.but_registration.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_registration.ForeColor = System.Drawing.Color.Black;
-            this.but_registration.Location = new System.Drawing.Point(309, 585);
-            this.but_registration.Name = "but_registration";
-            this.but_registration.Size = new System.Drawing.Size(153, 38);
-            this.but_registration.TabIndex = 50;
-            this.but_registration.Text = "Сохранить";
-            this.but_registration.UseVisualStyleBackColor = false;
+            this.but_save.BackColor = System.Drawing.Color.White;
+            this.but_save.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_save.ForeColor = System.Drawing.Color.Black;
+            this.but_save.Location = new System.Drawing.Point(309, 585);
+            this.but_save.Name = "but_save";
+            this.but_save.Size = new System.Drawing.Size(153, 38);
+            this.but_save.TabIndex = 50;
+            this.but_save.Text = "Сохранить";
+            this.but_save.UseVisualStyleBackColor = false;
+            this.but_save.Click += new System.EventHandler(this.but_save_Click);
             // 
             // panel2
             // 
@@ -399,6 +428,19 @@
             this.label_date.TabIndex = 3;
             this.label_date.Text = "data";
             // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // countryTableAdapter
+            // 
+            this.countryTableAdapter.ClearBeforeFill = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Edit_runner_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,7 +448,7 @@
             this.ClientSize = new System.Drawing.Size(948, 696);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.but_cancel);
-            this.Controls.Add(this.but_registration);
+            this.Controls.Add(this.but_save);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.tb_repass);
             this.Controls.Add(this.label14);
@@ -426,16 +468,20 @@
             this.Controls.Add(this.tb_firstName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_name);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lab_email);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pic_photo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "Edit_runner_profile";
             this.Text = "Edit_runner_profile";
+            this.Load += new System.EventHandler(this.Edit_runner_profile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_photo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zhmurov_demoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -452,7 +498,7 @@
         private System.Windows.Forms.Button but_logout;
         private System.Windows.Forms.PictureBox pic_photo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lab_email;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cb_gender;
         private System.Windows.Forms.Label label8;
@@ -473,8 +519,14 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tb_pass;
         private System.Windows.Forms.Button but_cancel;
-        private System.Windows.Forms.Button but_registration;
+        private System.Windows.Forms.Button but_save;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label_date;
+        private g463_zhmurov_demoDataSet g463_zhmurov_demoDataSet;
+        private System.Windows.Forms.BindingSource genderBindingSource;
+        private g463_zhmurov_demoDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private System.Windows.Forms.BindingSource countryBindingSource;
+        private g463_zhmurov_demoDataSetTableAdapters.CountryTableAdapter countryTableAdapter;
+        private System.Windows.Forms.Timer timer1;
     }
 }

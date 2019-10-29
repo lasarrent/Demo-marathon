@@ -15,7 +15,7 @@ namespace demo_maraphon
         {
             InitializeComponent();
         }
-        string email;
+        public static string email;
         string password;
         g463_zhmurov_demoDataSet.UserDataTable userDataTable = new g463_zhmurov_demoDataSet.UserDataTable();
         g463_zhmurov_demoDataSetTableAdapters.UserTableAdapter userTableAdapter = new g463_zhmurov_demoDataSetTableAdapters.UserTableAdapter();

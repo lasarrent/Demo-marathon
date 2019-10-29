@@ -31,5 +31,11 @@ namespace demo_maraphon
             contacts f_contacts = new contacts();
             f_contacts.Show();
         }
+
+        private void but_edit_Click(object sender, EventArgs e)
+        {
+            Edit_runner_profile f_edit = new Edit_runner_profile();
+            f_edit.Show();
+        }
     }
 }
