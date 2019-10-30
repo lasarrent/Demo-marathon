@@ -24,6 +24,7 @@ namespace demo_maraphon
         string fName;
         string lName;
         string photo;
+        string role;
 
         string gender;
         string date_of_born;
@@ -74,6 +75,8 @@ namespace demo_maraphon
             lName = cell[3].ToString();
             tb_name.Text = lName;
 
+            role = cell[4].ToString();
+
             photo = cell[5].ToString();
             tb_photoName.Text = photo;
 
@@ -96,7 +99,7 @@ namespace demo_maraphon
 
         private void but_save_Click(object sender, EventArgs e)
         {
-            if (tb_pass.Text == "Пароль" || tb_repass.Text == "Повторите пароль" || tb_name.Text == "Имя" || tb_firstName.Text == "Фамилия" || cb_gender.Text == "" || tb_photoName.Text == "Photo_log.jpg" || cb_gender.Text == "")
+            if (tb_pass.Text == "Пароль" || tb_repass.Text == "Повторите пароль" || tb_firstName.Text == "Имя" || tb_name.Text == "Фамилия" || cb_gender.Text == "" || tb_photoName.Text == "Photo_log.jpg" || cb_gender.Text == "")
             {
                 MessageBox.Show("Пожалуйста, заполните все поля!", "Не все поля заполнены", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -113,6 +116,18 @@ namespace demo_maraphon
                 else if (date_now.Year - dtp_yearBorn.Value.Year < 10 || dtp_yearBorn.Value.Year > date_now.Year)
                 {
                     MessageBox.Show("Дата должна соответствовать требованиям: участнику не может быть менее 10 лет; Дата не может быть больше текущей!", "Некорректная дата", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    try
+                    {
+                       // userTableAdapter.Adapter.UpdateCommand = "update [User] set [Password] = '" + tb_pass.Text + "' [FirstName] = '" + tb_firstName.Text + "' where [Email] ='"+ user_email + "'";
+                        userTableAdapter.Update(user_email, tb_pass.Text, tb_firstName.Text, tb_name.Text, role, tb_photoName.Text, user_email);
+                        
+                        MessageBox.Show("OK");
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }

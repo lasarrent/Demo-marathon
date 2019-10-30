@@ -42,9 +42,9 @@
             this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.g463_zhmurov_demoDataSet = new demo_maraphon.g463_zhmurov_demoDataSet();
             this.label8 = new System.Windows.Forms.Label();
-            this.tb_firstName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.tb_name = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tb_firstName = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cb_country = new System.Windows.Forms.ComboBox();
             this.countryBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -207,15 +207,15 @@
             this.label8.Text = "Фамилия:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tb_firstName
+            // tb_name
             // 
-            this.tb_firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_firstName.ForeColor = System.Drawing.Color.Gray;
-            this.tb_firstName.Location = new System.Drawing.Point(224, 265);
-            this.tb_firstName.Name = "tb_firstName";
-            this.tb_firstName.Size = new System.Drawing.Size(210, 31);
-            this.tb_firstName.TabIndex = 33;
-            this.tb_firstName.Text = "Фамилия";
+            this.tb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_name.ForeColor = System.Drawing.Color.Gray;
+            this.tb_name.Location = new System.Drawing.Point(224, 265);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(210, 31);
+            this.tb_name.TabIndex = 33;
+            this.tb_name.Text = "Фамилия";
             // 
             // label6
             // 
@@ -228,15 +228,15 @@
             this.label6.Text = "Имя:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tb_name
+            // tb_firstName
             // 
-            this.tb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_name.ForeColor = System.Drawing.Color.Gray;
-            this.tb_name.Location = new System.Drawing.Point(224, 209);
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(210, 31);
-            this.tb_name.TabIndex = 31;
-            this.tb_name.Text = "Имя";
+            this.tb_firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_firstName.ForeColor = System.Drawing.Color.Gray;
+            this.tb_firstName.Location = new System.Drawing.Point(224, 209);
+            this.tb_firstName.Name = "tb_firstName";
+            this.tb_firstName.Size = new System.Drawing.Size(210, 31);
+            this.tb_firstName.TabIndex = 31;
+            this.tb_firstName.Text = "Имя";
             // 
             // label12
             // 
@@ -465,9 +465,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cb_gender);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.tb_firstName);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_name);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tb_firstName);
             this.Controls.Add(this.lab_email);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pic_photo);
@@ -502,9 +502,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cb_gender;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tb_firstName;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb_name;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_firstName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cb_country;
         private System.Windows.Forms.Label label11;
