@@ -26,6 +26,7 @@ namespace demo_maraphon
         string photo;
         string role;
 
+        string id;
         string gender;
         string date_of_born;
         string countryCode;
@@ -80,9 +81,14 @@ namespace demo_maraphon
             photo = cell[5].ToString();
             tb_photoName.Text = photo;
 
+            if (photo != "") {
+                pic_photo.BackgroundImage = Image.FromFile("C:\\Users\\Asus\\Documents\\Конспекты 4-й курс\\демо-экзамен\\TP09_resources\\WSR2016_TP09_ресурсы_сессия_2\\Backgrounds\\" + photo);
+            }
+
             runnerTableAdapter.Fill(runnerDataTable);
             dr = runnerDataTable.Select("[Email] = '" + user_email + "'");
             cell = dr[0].ItemArray;
+            id = cell[0].ToString();
             gender = cell[2].ToString();
             cb_gender.SelectedValue = gender;
             date_of_born = cell[3].ToString();
@@ -122,7 +128,7 @@ namespace demo_maraphon
                     {
                        // userTableAdapter.Adapter.UpdateCommand = "update [User] set [Password] = '" + tb_pass.Text + "' [FirstName] = '" + tb_firstName.Text + "' where [Email] ='"+ user_email + "'";
                         userTableAdapter.Update(user_email, tb_pass.Text, tb_firstName.Text, tb_name.Text, role, tb_photoName.Text, user_email);
-                        
+                        runnerTableAdapter.Update(cb_gender.SelectedValue.ToString(), dtp_yearBorn.Value, cb_country.SelectedValue.ToString(), user_email, int.Parse(id));
                         MessageBox.Show("OK");
                     }
                     catch (Exception ex) {
@@ -151,6 +157,22 @@ namespace demo_maraphon
             }
             pic_photo.BackgroundImage = image;
             tb_photoName.Text = opf.SafeFileName.ToString();
+        }
+
+        private void but_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void but_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void but_logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.OpenForms["Runner_menu"].Close();
         }
     }
 }

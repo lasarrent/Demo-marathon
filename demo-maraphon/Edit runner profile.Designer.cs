@@ -106,6 +106,7 @@
             this.but_logout.TabIndex = 3;
             this.but_logout.Text = "logout";
             this.but_logout.UseVisualStyleBackColor = false;
+            this.but_logout.Click += new System.EventHandler(this.but_logout_Click);
             // 
             // but_back
             // 
@@ -117,6 +118,7 @@
             this.but_back.TabIndex = 2;
             this.but_back.Text = "Назад";
             this.but_back.UseVisualStyleBackColor = false;
+            this.but_back.Click += new System.EventHandler(this.but_back_Click);
             // 
             // label1
             // 
@@ -394,6 +396,7 @@
             this.but_cancel.TabIndex = 51;
             this.but_cancel.Text = "Отмена";
             this.but_cancel.UseVisualStyleBackColor = false;
+            this.but_cancel.Click += new System.EventHandler(this.but_cancel_Click);
             // 
             // but_save
             // 
