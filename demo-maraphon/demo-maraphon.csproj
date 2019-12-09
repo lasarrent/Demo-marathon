@@ -98,6 +98,12 @@
     <Compile Include="how long is a marathon.Designer.cs">
       <DependentUpon>how long is a marathon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interactive map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interactive map.Designer.cs">
+      <DependentUpon>Interactive map.cs</DependentUpon>
+    </Compile>
     <Compile Include="inventar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="how long is a marathon.resx">
       <DependentUpon>how long is a marathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interactive map.resx">
+      <DependentUpon>Interactive map.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inventar.resx">
       <DependentUpon>inventar.cs</DependentUpon>

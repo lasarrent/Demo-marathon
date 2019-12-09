@@ -57,5 +57,12 @@ namespace demo_maraphon
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Interactive_map f_map = new Interactive_map();
+            f_map.Show();
+            this.Hide();
+        }
     }
 }

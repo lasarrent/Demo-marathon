@@ -35,6 +35,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RaceA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RaceB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RaceC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RaceSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.butReceipt = new System.Windows.Forms.Button();
             this.nameOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.raceKitOptionADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.raceKitOptionBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,19 +53,13 @@
             this.g463_zhmurov_demoDataSet = new demo_maraphon.g463_zhmurov_demoDataSet();
             this.raceKitOptionSumTableAdapter = new demo_maraphon.g463_zhmurov_demoDataSetTableAdapters.RaceKitOptionSumTableAdapter();
             this.inventoryTableAdapter = new demo_maraphon.g463_zhmurov_demoDataSetTableAdapters.inventoryTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RaceA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RaceB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RaceC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RaceSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.butReceipt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.g463_zhmurov_demoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raceKitOptionSumBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.g463_zhmurov_demoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -135,6 +135,51 @@
             this.dataGridView2.Size = new System.Drawing.Size(797, 169);
             this.dataGridView2.TabIndex = 59;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RaceA,
+            this.RaceB,
+            this.RaceC,
+            this.RaceSum});
+            this.dataGridView1.Location = new System.Drawing.Point(258, 197);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(441, 73);
+            this.dataGridView1.TabIndex = 60;
+            // 
+            // RaceA
+            // 
+            this.RaceA.HeaderText = "RaceA";
+            this.RaceA.Name = "RaceA";
+            // 
+            // RaceB
+            // 
+            this.RaceB.HeaderText = "RaceB";
+            this.RaceB.Name = "RaceB";
+            // 
+            // RaceC
+            // 
+            this.RaceC.HeaderText = "RaceC";
+            this.RaceC.Name = "RaceC";
+            // 
+            // RaceSum
+            // 
+            this.RaceSum.HeaderText = "RaceSum";
+            this.RaceSum.Name = "RaceSum";
+            // 
+            // butReceipt
+            // 
+            this.butReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.butReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butReceipt.Location = new System.Drawing.Point(680, 518);
+            this.butReceipt.Name = "butReceipt";
+            this.butReceipt.Size = new System.Drawing.Size(195, 31);
+            this.butReceipt.TabIndex = 3;
+            this.butReceipt.Text = "Поступление";
+            this.butReceipt.UseVisualStyleBackColor = false;
+            this.butReceipt.Click += new System.EventHandler(this.butReceipt_Click);
+            // 
             // nameOptionDataGridViewTextBoxColumn
             // 
             this.nameOptionDataGridViewTextBoxColumn.DataPropertyName = "NameOption";
@@ -206,51 +251,6 @@
             // 
             this.inventoryTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RaceA,
-            this.RaceB,
-            this.RaceC,
-            this.RaceSum});
-            this.dataGridView1.Location = new System.Drawing.Point(258, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(441, 73);
-            this.dataGridView1.TabIndex = 60;
-            // 
-            // RaceA
-            // 
-            this.RaceA.HeaderText = "RaceA";
-            this.RaceA.Name = "RaceA";
-            // 
-            // RaceB
-            // 
-            this.RaceB.HeaderText = "RaceB";
-            this.RaceB.Name = "RaceB";
-            // 
-            // RaceC
-            // 
-            this.RaceC.HeaderText = "RaceC";
-            this.RaceC.Name = "RaceC";
-            // 
-            // RaceSum
-            // 
-            this.RaceSum.HeaderText = "RaceSum";
-            this.RaceSum.Name = "RaceSum";
-            // 
-            // butReceipt
-            // 
-            this.butReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.butReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butReceipt.Location = new System.Drawing.Point(680, 518);
-            this.butReceipt.Name = "butReceipt";
-            this.butReceipt.Size = new System.Drawing.Size(195, 31);
-            this.butReceipt.TabIndex = 3;
-            this.butReceipt.Text = "Поступление";
-            this.butReceipt.UseVisualStyleBackColor = false;
-            this.butReceipt.Click += new System.EventHandler(this.butReceipt_Click);
-            // 
             // inventar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,11 +269,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.g463_zhmurov_demoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.raceKitOptionSumBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.g463_zhmurov_demoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
