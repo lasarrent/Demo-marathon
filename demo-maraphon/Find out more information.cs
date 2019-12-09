@@ -33,5 +33,19 @@ namespace demo_maraphon
             f_charities.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            how_long_is_a_marathon f_how = new how_long_is_a_marathon();
+            f_how.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            About_marathon_skills_2017 f_about = new About_marathon_skills_2017();
+            f_about.Show();
+            this.Hide();
+        }
     }
 }

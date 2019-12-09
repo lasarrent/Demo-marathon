@@ -18,6 +18,8 @@ namespace demo_maraphon
             InitializeComponent();
         }
 
+        public static string email;
+
         DateTime date_now = DateTime.Now;
 
         public static bool is_valid_email (string email) {
@@ -101,6 +103,7 @@ namespace demo_maraphon
                     }
                     else
                     {
+                        email = tb_email.Text;
                         Registr_for_an_event f_evt = new Registr_for_an_event();
                         this.Close();
                         f_evt.Show();

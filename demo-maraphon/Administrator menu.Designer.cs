@@ -31,10 +31,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.but_sponsor = new System.Windows.Forms.Button();
-            this.but_edit = new System.Windows.Forms.Button();
-            this.but_result = new System.Windows.Forms.Button();
-            this.but_registration = new System.Windows.Forms.Button();
+            this.but_inventory = new System.Windows.Forms.Button();
+            this.but_charities = new System.Windows.Forms.Button();
+            this.but_volonteers = new System.Windows.Forms.Button();
+            this.but_users = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.but_logout = new System.Windows.Forms.Button();
             this.but_back = new System.Windows.Forms.Button();
@@ -74,53 +74,55 @@
             this.label5.Text = "Меню администратора";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // but_sponsor
+            // but_inventory
             // 
-            this.but_sponsor.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.but_sponsor.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_sponsor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_sponsor.Location = new System.Drawing.Point(451, 273);
-            this.but_sponsor.Name = "but_sponsor";
-            this.but_sponsor.Size = new System.Drawing.Size(322, 96);
-            this.but_sponsor.TabIndex = 44;
-            this.but_sponsor.Text = "Инвентарь";
-            this.but_sponsor.UseVisualStyleBackColor = false;
+            this.but_inventory.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.but_inventory.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_inventory.Location = new System.Drawing.Point(451, 273);
+            this.but_inventory.Name = "but_inventory";
+            this.but_inventory.Size = new System.Drawing.Size(322, 96);
+            this.but_inventory.TabIndex = 44;
+            this.but_inventory.Text = "Инвентарь";
+            this.but_inventory.UseVisualStyleBackColor = false;
+            this.but_inventory.Click += new System.EventHandler(this.but_inventory_Click);
             // 
-            // but_edit
+            // but_charities
             // 
-            this.but_edit.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.but_edit.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_edit.Location = new System.Drawing.Point(78, 273);
-            this.but_edit.Name = "but_edit";
-            this.but_edit.Size = new System.Drawing.Size(322, 96);
-            this.but_edit.TabIndex = 43;
-            this.but_edit.Text = "Благотворительные организации";
-            this.but_edit.UseVisualStyleBackColor = false;
+            this.but_charities.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.but_charities.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_charities.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_charities.Location = new System.Drawing.Point(78, 273);
+            this.but_charities.Name = "but_charities";
+            this.but_charities.Size = new System.Drawing.Size(322, 96);
+            this.but_charities.TabIndex = 43;
+            this.but_charities.Text = "Благотворительные организации";
+            this.but_charities.UseVisualStyleBackColor = false;
             // 
-            // but_result
+            // but_volonteers
             // 
-            this.but_result.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.but_result.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_result.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_result.Location = new System.Drawing.Point(451, 159);
-            this.but_result.Name = "but_result";
-            this.but_result.Size = new System.Drawing.Size(322, 96);
-            this.but_result.TabIndex = 42;
-            this.but_result.Text = "Волонтеры";
-            this.but_result.UseVisualStyleBackColor = false;
+            this.but_volonteers.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.but_volonteers.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_volonteers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_volonteers.Location = new System.Drawing.Point(451, 159);
+            this.but_volonteers.Name = "but_volonteers";
+            this.but_volonteers.Size = new System.Drawing.Size(322, 96);
+            this.but_volonteers.TabIndex = 42;
+            this.but_volonteers.Text = "Волонтеры";
+            this.but_volonteers.UseVisualStyleBackColor = false;
+            this.but_volonteers.Click += new System.EventHandler(this.but_volonteers_Click);
             // 
-            // but_registration
+            // but_users
             // 
-            this.but_registration.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.but_registration.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.but_registration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_registration.Location = new System.Drawing.Point(78, 159);
-            this.but_registration.Name = "but_registration";
-            this.but_registration.Size = new System.Drawing.Size(322, 96);
-            this.but_registration.TabIndex = 41;
-            this.but_registration.Text = "Пользователь";
-            this.but_registration.UseVisualStyleBackColor = false;
+            this.but_users.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.but_users.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.but_users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.but_users.Location = new System.Drawing.Point(78, 159);
+            this.but_users.Name = "but_users";
+            this.but_users.Size = new System.Drawing.Size(322, 96);
+            this.but_users.TabIndex = 41;
+            this.but_users.Text = "Пользователь";
+            this.but_users.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -174,10 +176,10 @@
             this.ClientSize = new System.Drawing.Size(905, 606);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.but_sponsor);
-            this.Controls.Add(this.but_edit);
-            this.Controls.Add(this.but_result);
-            this.Controls.Add(this.but_registration);
+            this.Controls.Add(this.but_inventory);
+            this.Controls.Add(this.but_charities);
+            this.Controls.Add(this.but_volonteers);
+            this.Controls.Add(this.but_users);
             this.Controls.Add(this.panel1);
             this.Name = "Administrator_menu";
             this.Text = "Administrator_menu";
@@ -195,10 +197,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button but_sponsor;
-        private System.Windows.Forms.Button but_edit;
-        private System.Windows.Forms.Button but_result;
-        private System.Windows.Forms.Button but_registration;
+        private System.Windows.Forms.Button but_inventory;
+        private System.Windows.Forms.Button but_charities;
+        private System.Windows.Forms.Button but_volonteers;
+        private System.Windows.Forms.Button but_users;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button but_logout;
         private System.Windows.Forms.Button but_back;

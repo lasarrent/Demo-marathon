@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +45,15 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About marathon skills 2017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About marathon skills 2017.Designer.cs">
+      <DependentUpon>About marathon skills 2017.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +91,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>g463_zhmurov_demoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="how long is a marathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="how long is a marathon.Designer.cs">
+      <DependentUpon>how long is a marathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventar.Designer.cs">
+      <DependentUpon>inventar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory receipt.Designer.cs">
+      <DependentUpon>Inventory receipt.cs</DependentUpon>
     </Compile>
     <Compile Include="List of charities.cs">
       <SubType>Form</SubType>
@@ -156,6 +184,15 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About marathon skills 2017.resx">
+      <DependentUpon>About marathon skills 2017.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrator menu.resx">
       <DependentUpon>Administrator menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +207,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Find out more information.resx">
       <DependentUpon>Find out more information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="how long is a marathon.resx">
+      <DependentUpon>how long is a marathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventar.resx">
+      <DependentUpon>inventar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory receipt.resx">
+      <DependentUpon>Inventory receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="List of charities.resx">
       <DependentUpon>List of charities.cs</DependentUpon>
@@ -215,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="g463_zhmurov_demoDataSet.xsc">

@@ -25,5 +25,17 @@ namespace demo_maraphon
         {
             Application.OpenForms[0].Show();
         }
+
+        private void but_volonteers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void but_inventory_Click(object sender, EventArgs e)
+        {
+            inventar f_inventar = new inventar();
+            f_inventar.Show();
+            this.Hide();
+        }
     }
 }

@@ -19,7 +19,9 @@ namespace demo_maraphon
         DateTime date_now = DateTime.Now;
 
         Image image;
-        string user_email = Login.email;
+        string email_reg = Registration_as_a_runner.email;
+        string email_log = Login.email;
+        string user_email;
         string password;
         string fName;
         string lName;
@@ -57,6 +59,14 @@ namespace demo_maraphon
             this.countryTableAdapter.Fill(this.g463_zhmurov_demoDataSet.Country);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "g463_zhmurov_demoDataSet.Gender". При необходимости она может быть перемещена или удалена.
             this.genderTableAdapter.Fill(this.g463_zhmurov_demoDataSet.Gender);
+
+            if (email_reg == "")
+            {
+                user_email = email_log;
+            }
+            else {
+                user_email = email_log;
+            }
 
             lab_email.Text = user_email;
 
